@@ -3,13 +3,13 @@
                 <h3><?= $data_detail['title_detail_post'] ?></h3>
             </div>
             <div class="date_time">
-                <p>Ngày - Tháng - 2023</p>
+                <p><?= $data_detail['created_at'] ?></p>
             </div>
             <div class="image_post text-center">
-                <img  src="assets/upload/<?= $data_detail['image'] ?>" alt="">
+                <img style="width: 100%;" src="assets/upload/<?= $data_detail['image'] ?>" alt="">
             </div>
             <div class="content_post_detail">
-                <p><?= $data_detail['content_post'] ?></p> 
+                <p class="mt-4"><?= $data_detail['content_post'] ?></p> 
             </div>
             <div class="comments border-top border-dark">
                 <div class="comment_user pt-4">

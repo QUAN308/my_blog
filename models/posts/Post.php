@@ -4,8 +4,8 @@
         $sql = "SELECT * FROM post";
         return getData($sql);
     }
-    function create_post($title, $content, $img){
-        $sql = "INSERT INTO `post`(`title_detail_post`, `content_post`, `image`) VALUES ('$title', '$content', '$img')";
-        return getData($sql);
+    function create_post($title, $content, $img, $date){
+        $sql = "INSERT INTO `post`(`title_detail_post`, `content_post`, `image`, `created_at`) VALUES (?, ?, ?, ?)";
+        return insertBigText($sql, $title, $content, $img, $date);
     }
 ?>

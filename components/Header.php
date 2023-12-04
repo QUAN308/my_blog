@@ -16,7 +16,7 @@
                             <li><a class="dropdown-item" href="#">Action</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Bài đăng</a></li>
+                    <li><a href="?url=post-manager">Bài đăng</a></li>
                 </ul>
             </nav>
             <div class="login d-flex align-items-center">

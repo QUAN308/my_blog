@@ -8,8 +8,8 @@
             <div class="title">
                 <a href="?url=post-detail&id=<?= $val['id'] ?>" class="text-decoration-none text-dark"><?php echo $val['title_detail_post'] ?></a>
             </div>
-            <div class="date_time text-black-50">Ngày - tháng - 2023</div>
-            <div class="short_post">
+            <div class="date_time text-black-50"><?= $val['created_at'] ?></div>
+            <div style="height: 50px; overflow: hidden;text-overflow: ellipsis;" class="short_post">
                 <a href="?url=post-detail&id=<?= $val['id'] ?>" class="text-decoration-none text-dark">
                     <?php echo $val['content_post'] ?>
                 </a>

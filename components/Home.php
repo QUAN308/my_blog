@@ -29,6 +29,8 @@
                 include "views/users/login.php";
             }else if($status == "register"){
                 include "views/users/register.php";
+            }else if($status == "manager"){
+                include "views/posts/post_manager.php";
             }
         ?>
     </div>

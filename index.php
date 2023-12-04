@@ -10,6 +10,10 @@
             require_once "controllers/posts/PostController.php"; 
             addPost();
             break;
+        case 'post-manager':
+            require_once "controllers/posts/PostController.php"; 
+            client();
+            break;
         case 'post-detail':
             require_once "controllers/posts/PostController.php"; 
             postDetail();
