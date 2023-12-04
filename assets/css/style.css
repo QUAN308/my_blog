@@ -55,9 +55,13 @@ header .logo{
 }
 .drop_menu>li{
     border-bottom: 1px solid #000;
+    border-bottom: 1px solid #757575;
 }
 .drop_menu>li>a{
     padding-top: 10px;
+}
+#btn_logout{
+    display: none;
 }
 /* POSTS */
 #posts{

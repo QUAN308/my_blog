@@ -18,6 +18,14 @@
             require_once "controllers/users/UserController.php"; 
             login();
             break;
+        case 'register':
+            require_once "controllers/users/UserController.php"; 
+            register();
+            break;
+        case 'logout':
+            require_once "controllers/users/UserController.php"; 
+            logout();
+            break;
         default:
             break;
     }
