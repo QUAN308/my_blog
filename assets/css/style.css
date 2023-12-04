@@ -70,3 +70,16 @@ header .logo{
     font-size: 26px;
     font-weight: 700;
 }
+
+/* DETAIL POST - COMMENT */
+.form_comment{
+    width: 768px;
+    position: relative;
+}
+.btn_post_comment{
+    border: none;
+    padding: 5px 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}

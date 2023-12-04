@@ -5,13 +5,13 @@
             </div>
             <nav class="navbar">
                 <ul class="d-flex align-items-center">
-                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="?url=/">Trang chủ</a></li>
                     <li><a href="">Bài viết</a></li>
                     <li class="category_nav position-relative">
                         <a class="nav-link dropdown-toggle">
                             Danh mục
                         </a>
-                        <ul class="drop_menu position-absolute border border-dark pe-5 pb-3">
+                        <ul class="drop_menu position-absolute border border-dark pe-5 pb-3 bg-light">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Action</a></li>
