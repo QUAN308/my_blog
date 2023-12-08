@@ -13,6 +13,17 @@
         }
         return $stmt->fetch();
     }
+    function updatePost($id, $title, $content, $image, $update_at){
+        $conn = connect();
+        $sql = "UPDATE post SET title_detail_post=?, content_post=?, image=?, updated_at=? WHERE id=?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(1, $title);
+        $stmt->bindParam(2, $content);
+        $stmt->bindParam(3, $image);
+        $stmt->bindParam(4, $update_at);
+        $stmt->bindParam(5, $id);
+        $stmt->execute();
+    }
     function insertBigText($query, $title, $content, $img, $date){
         $conn = connect();
         $stmt = $conn->prepare($query);

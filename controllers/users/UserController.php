@@ -14,7 +14,9 @@
                 $error_login = "Tài khoản hoặc mật khẩu không đúng";
             }else{
                 $user = $data_login['name'];
+                $avatar = $data_login['avatar'];
                 $_SESSION['login_user'] = $user;
+                $_SESSION['login_avatar'] = $avatar;
                 $success_login = "Đăng nhập thành công - quay lại trang chủ";
             }
         }

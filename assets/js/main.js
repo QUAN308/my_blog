@@ -1,24 +1,23 @@
-var categoryMenu = document.querySelector('.category_nav');
-var dropMenu = document.querySelector('.drop_menu');
-var preLogout = document.querySelector('.login_suces');
-var btnLogout = document.querySelector('#btn_logout');
-var drop = false;
-var drop_logout = false;
-console.log(preLogout);
-preLogout.addEventListener("click", () => {
-    drop_logout = !drop_logout;
-    if(drop_logout == false){
-        btnLogout.style.display = "none";
-    }else if(drop_logout == true){
-        btnLogout.style.display = "block";
+var backGround = document.querySelector('#background_full');
+var avatar_click = document.querySelector('.avatar');
+var show = document.querySelector('#show_detail_avatar');
+var getPostItem = document.querySelectorAll('.post_item');
+var length = getPostItem.length;
+for(let i=1;i<=length;i++){
+    if(i%2==0){
+        console.log("Quan");
+    }else{
+        getPostItem[i].style.paddingLeft = "0px";
     }
-})
-categoryMenu.addEventListener("click", () => {
-    drop = !drop;
-    if(drop == false){
-        dropMenu.style.display = "none";
-    }else if(drop == true){
-        dropMenu.style.display = "block";
-    }
-})
-
+}
+if(avatar_click){
+    avatar_click.addEventListener("click", () => {
+        show.style.display = "block";
+        backGround.style.display = "block";
+    })
+    backGround.addEventListener("click", () => {
+        show.style.display = "none";
+        backGround.style.display = "none";
+    })
+    
+}

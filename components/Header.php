@@ -1,30 +1,31 @@
-
-    <header class="border-bottom border-dark">
+        <div id="show_detail_avatar">
+            <img src="assets/upload/<?=$_SESSION['login_avatar']?>" alt="">
+        </div>
+        <header style="width: 922px;" class="border-bottom border-dark position-fixed bg-light">
             <div class="logo">
-                <a class=" text-decoration-none text-dark" href="?url=/">My Blog</a>
+                <a class="text-decoration-none text-dark" href="?url=/">My Blog</a>
             </div>
             <nav class="navbar">
                 <ul class="d-flex align-items-center">
                     <li><a href="?url=/">Trang chủ</a></li>
-                    <li class="category_nav position-relative">
-                        <a class="nav-link dropdown-toggle">
-                            Danh mục
-                        </a>
-                        <ul class="drop_menu position-absolute border border-dark pe-5 pb-3 bg-light">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="?url=post-manager">Bài đăng</a></li>
+                    <li class="category_nav"><a href="?url=category">Danh mục</a></li>
+                    <?php if(isset($_SESSION['login_user'])): ?>
+                        <li><a href="?url=post-manager">Quản lý trang</a></li>
+                    <?php endif; ?>
+                    <li><a href="?url=/">About me</a></li>
                 </ul>
             </nav>
             <div class="login d-flex align-items-center">
                 <?php if(isset($_SESSION['login_user'])): ?>
-                    <div style="position: relative;" class="box_user_login">
-                        <div style="cursor: pointer; margin-bottom: 0;" class="login_suces text-decoration-underline fw-bold text-dark"><?php echo $_SESSION['login_user'] ?></div>
-                        <div style="position: absolute; border: 1px solid black; margin-top: 10px; background-color: #fff; " id="btn_logout">
-                            <a style="padding: 10px 10px; text-decoration: none; color: #000;" href="?url=logout">Đăng xuất</a>
+                    <div style="position: relative;" class="box_user_login d-flex align-items-center">
+                        <div class="pe-2">
+                            <div style="cursor: pointer; margin-bottom: 0;" class="login_suces text-decoration-underline fw-bold text-dark"><?php echo $_SESSION['login_user'] ?></div>
+                            <div style="position: absolute; border: 1px solid black; margin-top: 10px; background-color: #fff;" id="btn_logout">
+                                <a href="?url=logout">Đăng xuất <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div style="width: 40px; height: 40px;" class="avatar">
+                            <img style="width: 40px; height: 40px; object-fit: cover; border-radius: 50px; border: 1px solid black; cursor: pointer;" src="assets/upload/<?=$_SESSION['login_avatar']?>" alt="">
                         </div>
                     </div>
                 <?php else: ?>
@@ -32,3 +33,4 @@
                 <?php endif; ?>
             </div>
         </header>
+        

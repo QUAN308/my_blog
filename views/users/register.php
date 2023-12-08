@@ -1,5 +1,4 @@
-<form style="width: 100%;" class="d-flex justify-content-center pt-5" action="?url=register" enctype="multipart/form-data" method="post">
-    
+<form style="width: 100%;" class="d-flex justify-content-center pt-5" action="?url=register" enctype="multipart/form-data" method="post"> 
     <div class="row">
         <?php if(isset($success)): ?>
             <div class="alert alert-success col-md-12" role="alert"><?php echo $success ?></div>

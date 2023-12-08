@@ -61,14 +61,31 @@ header .logo{
     padding-top: 10px;
 }
 #btn_logout{
-    display: none;
+    visibility: hidden;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 150px;
 }
+#btn_logout a{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    padding-left: 10px;
+}
+#btn_logout a:hover {
+    background-color: #b8b8b8;
+}
+#btn_logout a i{
+    padding-left: 10px;
+}
+
 /* POSTS */
 #posts{
-    display: grid;
-}
-.post_item{
-    width: 450px;
+    width: 920px;
 }
 .post_item .title{
     font-size: 26px;
@@ -86,4 +103,59 @@ header .logo{
     background-color: #000;
     color: #fff;
     border-radius: 5px;
+}
+/* AVATAR */
+#show_detail_avatar{
+    width: 600px;
+    height: 600px;
+    background-color: #757575;
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    display: none;
+}
+#show_detail_avatar img{
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    cursor: pointer;
+}
+#background_full{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 4;
+    background-color: #000000c4;
+    cursor: pointer;
+    display: none;
+}
+/* MANAGER PAGE */
+.button_manager .items{
+    margin-top: 23px;
+    text-align: center;
+}
+.button_manager .items a{
+    width: 100%;
+    height: 60px;
+    background-color: #323232;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.button_manager .items a:hover{
+    background-color: #898989;
+}
+/* CATEGORY */
+.category {
+    width: 100%;
+}
+.category .thumb_nail_category img{
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
 }
